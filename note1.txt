@@ -1,0 +1,17 @@
+keytool error: java.lang.Exception: Keystore file does not exist: ?C:\tmpcert\cacerts
+java.lang.Exception: Keystore file does not exist: ?C:\tmpcert\cacerts
+	at sun.security.tools.keytool.Main.doCommands(Main.java:772)
+	at sun.security.tools.keytool.Main.run(Main.java:368)
+	at sun.security.tools.keytool.Main.main(Main.java:361)
+
+openssl s_client -servername download.eclipse.org -connect download.eclipse.org:443 -showcerts
+openssl s_client -servername download.eclipse.org -connect download.eclipse.org:443    -sess_out host.name.com.cer
+https://download.eclipse.org/releases/2019-12/p2.index
+
+
+openssl x509 -in eclipseorg.crt  -text -noout
+
+
+keytool -import -alias example -keystore  C:\Program Files (x86)\Java\jre1.6.0_22\lib\security\cacerts -file example.cer 
+
+keytool -import -alias bintraycom -keystore C:\tmpcert\cacerts -file bintraycom.crt 
